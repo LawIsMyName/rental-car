@@ -11,5 +11,8 @@ public class App {
         double gpsPrice = 2.95;
         double roadsidePrice = 3.95;
 
+        System.out.print("Enter pickup date: ");
+        String pickupDate = scanner.nextLine();
+        scanner.nextLine();
     }
 }

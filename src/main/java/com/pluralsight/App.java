@@ -31,5 +31,7 @@ public class App {
         System.out.print("Enter your current age: ");
         int age = scanner.nextInt();
 
+        double total = 0;
+
     }
 }

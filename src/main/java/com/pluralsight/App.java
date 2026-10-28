@@ -13,7 +13,11 @@ public class App {
         System.out.println("Pickup Date: " + getRentalInfo.pickupDate());
         System.out.println("Rental Days: " + getRentalInfo.rentalDays());
         System.out.println("Customer Age: " + getRentalInfo.age());
-        System.out.println("Optional Services Total: $" + getRentalInfo.total());
+        System.out.println("Basic Car Rental: $" + getRentalInfo.basicRental());
+        System.out.println("Options Cost: $" + getRentalInfo.optionsCost());
+        System.out.println("Underage Driver Surcharge: $" + getRentalInfo.underageSurcharge());
+        System.out.println("Total Cost: $" + getRentalInfo.total());
+
 
     }
 

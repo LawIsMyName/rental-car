@@ -33,5 +33,17 @@ public class App {
 
         double total = 0;
 
+        if (tollTag.equalsIgnoreCase("yes")) {
+            total = total + (tollTagPrice * rentalDays);
+        }
+
+        if (gps.equalsIgnoreCase("yes")) {
+            total = total + (gpsPrice * rentalDays);
+        }
+
+        if (roadside.equalsIgnoreCase("yes")) {
+            total = total + (roadsidePrice * rentalDays);
+        }
+
     }
 }

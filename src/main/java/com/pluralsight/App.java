@@ -7,5 +7,9 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
+        double tollTagPrice = 3.95;
+        double gpsPrice = 2.95;
+        double roadsidePrice = 3.95;
+
     }
 }

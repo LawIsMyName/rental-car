@@ -63,6 +63,9 @@ public class App {
         if (age < 25) {
             underageSurcharge = basicRental * 0.30;
         }
+
+        double total = basicRental + optionsCost + underageSurcharge;
+
         return new getRentalInformation(pickupDate, rentalDays, age, basicRental, optionsCost, underageSurcharge, total);
 
     }

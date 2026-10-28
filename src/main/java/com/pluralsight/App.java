@@ -21,6 +21,7 @@ public class App {
         double tollTagPrice = 3.95;
         double gpsPrice = 2.95;
         double roadsidePrice = 3.95;
+        double dailyRentalPrice = 29.99;
 
         System.out.print("Enter pickup date: ");
         String pickupDate = scanner.nextLine();
@@ -45,18 +46,22 @@ public class App {
 
         double optionsCost = 0;
 
-
-
         if (tollTag.equalsIgnoreCase("yes")) {
-            total = total + (tollTagPrice * rentalDays);
+            optionsCost = optionsCost + (tollTagPrice * rentalDays);
         }
 
         if (gps.equalsIgnoreCase("yes")) {
-            total = total + (gpsPrice * rentalDays);
+            optionsCost = optionsCost + (gpsPrice * rentalDays);
         }
 
         if (roadside.equalsIgnoreCase("yes")) {
-            total = total + (roadsidePrice * rentalDays);
+            optionsCost = optionsCost + (roadsidePrice * rentalDays);
+        }
+
+        double underageSurcharge = 0;
+
+        if (age < 25) {
+            underageSurcharge = basicRental * 0.30;
         }
         return new getRentalInformation(pickupDate, rentalDays, age, basicRental, optionsCost, underageSurcharge, total);
 

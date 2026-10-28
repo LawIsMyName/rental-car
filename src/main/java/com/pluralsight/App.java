@@ -24,7 +24,7 @@ public class App {
 
         System.out.print("Enter pickup date: ");
         String pickupDate = scanner.nextLine();
-        
+
         System.out.print("Enter number of rental days: ");
         int rentalDays = scanner.nextInt();
         scanner.nextLine();
@@ -54,10 +54,10 @@ public class App {
         if (roadside.equalsIgnoreCase("yes")) {
             total = total + (roadsidePrice * rentalDays);
         }
-        return new getRentalInformation(pickupDate, rentalDays, age, total);
+        return new getRentalInformation(pickupDate, rentalDays, age, basicRental, optionsCost, underageSurcharge, total);
 
     }
 
-    private record getRentalInformation(String pickupDate, int rentalDays, int age, double total) {
+    private record getRentalInformation( String pickupDate, int rentalDays, int age, double basicRental, double optionsCost, double underageSurcharge, double total) {
     }
 }

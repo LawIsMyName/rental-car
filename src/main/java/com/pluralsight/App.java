@@ -28,7 +28,7 @@ public class App {
         System.out.print("Would you like roadside assistance? (yes/no): ");
         String roadside = scanner.nextLine();
 
-        ystem.out.print("Enter your current age: ");
+        System.out.print("Enter your current age: ");
         int age = scanner.nextInt();
 
     }

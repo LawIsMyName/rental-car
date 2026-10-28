@@ -19,5 +19,8 @@ public class App {
         int rentalDays = scanner.nextInt();
         scanner.nextLine();
 
+        System.out.print("Would you like an electronic toll tag? (yes/no): ");
+        String tollTag = scanner.nextLine();
+
     }
 }

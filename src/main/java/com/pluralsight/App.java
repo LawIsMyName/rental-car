@@ -22,5 +22,8 @@ public class App {
         System.out.print("Would you like an electronic toll tag? (yes/no): ");
         String tollTag = scanner.nextLine();
 
+        System.out.print("Would you like GPS? (yes/no): ");
+        String gps = scanner.nextLine();
+
     }
 }

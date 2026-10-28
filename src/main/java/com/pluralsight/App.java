@@ -22,6 +22,8 @@ public class App {
     }
 
     private static getRentalInformation getGetRentalInformation(Scanner scanner) {
+
+        // Rental prices
         double tollTagPrice = 3.95;
         double gpsPrice = 2.95;
         double roadsidePrice = 3.95;
@@ -30,6 +32,7 @@ public class App {
         System.out.print("Enter pickup date: ");
         String pickupDate = scanner.nextLine();
 
+        // Prompts for user
         System.out.print("Enter number of rental days: ");
         int rentalDays = scanner.nextInt();
         scanner.nextLine();
@@ -46,8 +49,10 @@ public class App {
         System.out.print("Enter your current age: ");
         int age = scanner.nextInt();
 
+        // Calculate basic rental cost
         double basicRental = dailyRentalPrice * rentalDays;
 
+        // Calculate optional services
         double optionsCost = 0;
 
         if (tollTag.equalsIgnoreCase("yes")) {
@@ -62,12 +67,14 @@ public class App {
             optionsCost = optionsCost + (roadsidePrice * rentalDays);
         }
 
+        // Calculate underage surcharge
         double underageSurcharge = 0;
 
         if (age < 25) {
             underageSurcharge = basicRental * 0.30;
         }
 
+        // Calculate final rental cost
         double total = basicRental + optionsCost + underageSurcharge;
 
         return new getRentalInformation(pickupDate, rentalDays, age, basicRental, optionsCost, underageSurcharge, total);

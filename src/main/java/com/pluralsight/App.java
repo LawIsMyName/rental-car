@@ -43,7 +43,9 @@ public class App {
 
         double basicRental = dailyRentalPrice * rentalDays;
 
-        double total = 0;
+        double optionsCost = 0;
+
+
 
         if (tollTag.equalsIgnoreCase("yes")) {
             total = total + (tollTagPrice * rentalDays);

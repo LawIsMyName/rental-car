@@ -41,6 +41,8 @@ public class App {
         System.out.print("Enter your current age: ");
         int age = scanner.nextInt();
 
+        double basicRental = dailyRentalPrice * rentalDays;
+
         double total = 0;
 
         if (tollTag.equalsIgnoreCase("yes")) {

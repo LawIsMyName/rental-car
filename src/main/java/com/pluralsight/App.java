@@ -7,6 +7,17 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
+        getRentalInformation getRentalInfo = getGetRentalInformation(scanner);
+
+        System.out.println("===== RENTAL SUMMARY =====");
+        System.out.println("Pickup Date: " + getRentalInfo.pickupDate());
+        System.out.println("Rental Days: " + getRentalInfo.rentalDays());
+        System.out.println("Customer Age: " + getRentalInfo.age());
+        System.out.println("Optional Services Total: $" + getRentalInfo.total());
+
+    }
+
+    private static getRentalInformation getGetRentalInformation(Scanner scanner) {
         double tollTagPrice = 3.95;
         double gpsPrice = 2.95;
         double roadsidePrice = 3.95;
@@ -44,6 +55,10 @@ public class App {
         if (roadside.equalsIgnoreCase("yes")) {
             total = total + (roadsidePrice * rentalDays);
         }
+        return new getRentalInformation(pickupDate, rentalDays, age, total);
 
+    }
+
+    private record getRentalInformation(String pickupDate, int rentalDays, int age, double total) {
     }
 }

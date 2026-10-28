@@ -25,5 +25,8 @@ public class App {
         System.out.print("Would you like GPS? (yes/no): ");
         String gps = scanner.nextLine();
 
+        System.out.print("Would you like roadside assistance? (yes/no): ");
+        String roadside = scanner.nextLine();
+
     }
 }

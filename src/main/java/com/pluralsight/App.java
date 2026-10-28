@@ -24,8 +24,7 @@ public class App {
 
         System.out.print("Enter pickup date: ");
         String pickupDate = scanner.nextLine();
-        scanner.nextLine();
-
+        
         System.out.print("Enter number of rental days: ");
         int rentalDays = scanner.nextInt();
         scanner.nextLine();
